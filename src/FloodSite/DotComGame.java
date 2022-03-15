@@ -1,12 +1,17 @@
 package FloodSite;
 
-public class SimpleDotComGame {
+import java.util.ArrayList;
+
+public class DotComGame {
     public static void main(String[] args) {
         int numOfGuesses = 0;
         GameHelper helper = new GameHelper();
-        SimpleDotCom theDotCom = new SimpleDotCom();
+        DotCom theDotCom = new DotCom();
         int randomNum = (int) (Math.random() * 5);
-        int[] location = {randomNum,randomNum + 1, randomNum + 2};
+        ArrayList<String> location= new ArrayList<>();
+        location.add(randomNum + "");
+        location.add(randomNum + 1 + "");
+        location.add(randomNum + 2 + "");
         theDotCom.setLocationCells(location);
         boolean isAlive = true;
 
